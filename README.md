@@ -1,48 +1,66 @@
-# Astro Starter Kit: Basics
+# Sitio Web de Peluquería con Astro 5 y Tailwind CSS v4
 
-```sh
-npm create astro@latest -- --template basics
-```
+Un sitio web moderno y elegante para un salón de peluquería, desarrollado con las últimas tecnologías web para ofrecer una experiencia de usuario fluida y atractiva.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+![Peluquería Astro](https://github.com/Aosiika/peluqeria-astro/assets/preview.png)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Tecnologías Utilizadas
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- **[Astro 5](https://astro.build/)**: Framework web que ofrece rendimiento excepcional con "zero-JS por defecto"
+- **[Tailwind CSS v4](https://tailwindcss.com/)**: La última versión del popular framework CSS utility-first
+- **JavaScript**: Para funcionalidades dinámicas y efectos interactivos
 
-## 🚀 Project Structure
+## ✨ Características
 
-Inside of your Astro project, you'll see the following folders and files:
+- Diseño moderno con paleta de colores en tonos de fucsia
+- Interfaz responsiva que se adapta a todos los dispositivos
+- Efectos visuales sutiles para mejorar la experiencia de usuario
+- Secciones bien definidas para servicios, equipo y reserva de citas
+- Transiciones suaves entre secciones
+
+## 📂 Estructura del Proyecto
 
 ```text
 /
 ├── public/
 │   └── favicon.svg
 ├── src/
+│   ├── assets/
+│   │   └── [imágenes y recursos]
+│   ├── components/
+│   │   ├── Header.astro
+│   │   ├── Hero.astro
+│   │   ├── Services.astro
+│   │   ├── About.astro
+│   │   ├── Equipo.astro
+│   │   ├── Contacto.astro
+│   │   └── Footer.astro
 │   ├── layouts/
 │   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
+│   ├── pages/
+│   │   └── index.astro
+│   └── styles/
+│       └── global.css
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🧞 Comandos
 
-## 🧞 Commands
+| Comando                   | Acción                                              |
+| :------------------------ | :-------------------------------------------------- |
+| `npm install`             | Instala las dependencias                            |
+| `npm run dev`             | Inicia el servidor de desarrollo en `localhost:4321`|
+| `npm run build`           | Construye el sitio para producción en `./dist/`     |
+| `npm run preview`         | Vista previa de la build antes de desplegar         |
 
-All commands are run from the root of the project, from a terminal:
+## 🔧 Configuración Especial
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Este proyecto utiliza Tailwind CSS v4, que requiere una configuración específica:
 
-## 👀 Want to learn more?
+- Usa `@tailwindcss/vite` como plugin de Vite en `astro.config.mjs`
+- Implementa una simple importación `@import 'tailwindcss';` en `global.css`
+- No utiliza `@astrojs/tailwind` ya que es incompatible con Tailwind CSS v4
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 👥 Autor
+
+Desarrollado por [Aosiika](https://github.com/Aosiika)
