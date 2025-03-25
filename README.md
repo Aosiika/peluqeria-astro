@@ -4,7 +4,7 @@ Un sitio web moderno y elegante para un salón de peluquería, desarrollado con 
 
 🔗 **[Ver Demo](https://beautyhair-ao.netlify.app/)**
 
-![Peluquería Astro](https://github.com/Aosiika/peluqeria-astro/assets/preview.png)
+![Peluquería Astro](https://github.com/Aosiika/peluqeria-astro/blob/main/src/assets/preview.png)
 
 ## 🚀 Tecnologías Utilizadas
 
