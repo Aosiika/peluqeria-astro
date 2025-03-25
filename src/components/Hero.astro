@@ -1,0 +1,54 @@
+---
+// Importaciones
+import Calendar from './icons/Calendar.astro';
+---
+
+<section class="relative h-[80vh] flex items-center z-10">
+  <!-- Imagen de fondo con overlay y máscara de degradado -->
+  <div class="absolute inset-0 z-0">
+    <div class="absolute inset-0 bg-neutral-900/60 z-10"></div>
+    <img 
+      src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80" 
+      alt="Interior de peluquería" 
+      class="w-full h-full object-cover"
+    />
+  </div>
+  
+  <!-- Contenido del hero -->
+  <div class="container mx-auto px-4 relative z-20 text-white">
+    <div class="max-w-2xl mx-auto md:mx-0">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">Estilo y belleza para cada ocasión</h1>
+      <p class="text-base md:text-xl mb-6 md:mb-8">Descubre nuestros servicios profesionales de peluquería y estética</p>
+      <a 
+        href="#sobre-nosotros" 
+        class="inline-flex items-center justify-center gap-2 px-6 md:px-8 py-3 md:py-4 bg-fuchsia-600 text-white rounded-lg font-medium
+               shadow-lg shadow-fuchsia-600/30
+               hover:bg-fuchsia-500 hover:shadow-fuchsia-500/40 hover:-translate-y-1
+               transition-all duration-300 ease-in-out
+               animate-pulse-slow relative overflow-hidden
+               after:absolute after:inset-0 after:bg-white/20 after:scale-x-0 after:origin-left
+               hover:after:scale-x-100 after:transition-transform after:duration-300"
+      >
+        Reservar cita <Calendar width="22" height="22" />
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+
+
+  /* Animación de latido personalizada */
+  @keyframes pulse-slow {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse-slow 3s infinite;
+  }
+</style>

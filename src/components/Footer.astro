@@ -1,0 +1,48 @@
+---
+// Obtener el año actual
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="py-6 border-t border-white/10 mt-auto relative">
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center">
+      <p class="text-sm opacity-70">
+        &copy; {currentYear} Peluquería. Todos los derechos reservados.
+      </p>
+      
+      <a 
+        href="#" 
+        class="flex items-center justify-center w-10 h-10 bg-fuchsia-500/20 rounded-full hover:bg-fuchsia-500/30 transition-all duration-300 group"
+        aria-label="Volver arriba"
+      >
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          fill="none" 
+          viewBox="0 0 24 24" 
+          stroke-width="2" 
+          stroke="currentColor" 
+          class="w-5 h-5 text-fuchsia-400 group-hover:text-white transition-colors duration-300 transform group-hover:-translate-y-1"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Script para hacer scroll suave al hacer clic en el botón
+  document.addEventListener('DOMContentLoaded', () => {
+    const scrollButton = document.querySelector('footer a[href="#"]');
+    
+    if (scrollButton) {
+      scrollButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    }
+  });
+</script>

@@ -1,0 +1,75 @@
+---
+// Importaciones
+---
+
+<section id="sobre-nosotros" class="py-16 md:py-24 relative overflow-hidden">
+  <!-- Elementos decorativos de fondo -->
+  
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <!-- Columna de imagen (simplificada) -->
+      <div class="relative order-2 md:order-1">
+        <div class="aspect-[4/5] rounded-lg overflow-hidden shadow-xl shadow-black/20 transform transition-transform duration-700 hover:scale-[1.02]">
+          <img 
+            src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+            alt="Nuestro equipo" 
+            class="w-full h-full object-cover"
+          />
+          <!-- Overlay con gradiente sutil -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+        </div>
+        <!-- Elemento decorativo -->
+        <div class="absolute -bottom-4 -right-4 w-full h-full border-2 border-fuchsia-500/30 rounded-lg -z-10"></div>
+      </div>
+      
+      <!-- Columna de texto -->
+      <div class="order-1 md:order-2">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 relative inline-block">
+          Nuestra Historia
+          <span class="absolute -bottom-2 left-0 w-1/2 h-1 bg-fuchsia-500"></span>
+        </h2>
+        
+        <p class="text-base md:text-lg mb-6 opacity-80">
+          Desde 2010, <span class="text-fuchsia-400 font-medium">BeautyHair</span> ha transformado la experiencia de belleza en algo más que un simple corte de pelo. Somos un equipo apasionado de artistas del cabello que combina técnicas tradicionales con las últimas tendencias.
+        </p>
+        
+        <p class="text-base md:text-lg mb-8 opacity-80">
+          Lo que nos diferencia es nuestra filosofía: creemos que cada cliente merece un enfoque personalizado que realce su belleza natural y refleje su personalidad única.
+        </p>
+        
+        <!-- Lista de valores con animación -->
+        <div class="space-y-4">
+          <div class="flex items-start gap-3 transform transition-transform duration-300 hover:-translate-y-1">
+            <div class="w-10 h-10 rounded-full bg-fuchsia-500/20 flex items-center justify-center flex-shrink-0">
+              <div class="w-5 h-5 rounded-full bg-fuchsia-500"></div>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg">Experiencia Personalizada</h3>
+              <p class="opacity-70">Cada cliente recibe un servicio adaptado a sus necesidades específicas.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-3 transform transition-transform duration-300 hover:-translate-y-1">
+            <div class="w-10 h-10 rounded-full bg-fuchsia-500/20 flex items-center justify-center flex-shrink-0">
+              <div class="w-5 h-5 rounded-full bg-fuchsia-500"></div>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg">Productos Premium</h3>
+              <p class="opacity-70">Utilizamos solo productos de la más alta calidad para cuidar tu cabello.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-3 transform transition-transform duration-300 hover:-translate-y-1">
+            <div class="w-10 h-10 rounded-full bg-fuchsia-500/20 flex items-center justify-center flex-shrink-0">
+              <div class="w-5 h-5 rounded-full bg-fuchsia-500"></div>
+            </div>
+            <div>
+              <h3 class="font-semibold text-lg">Innovación Constante</h3>
+              <p class="opacity-70">Nos mantenemos al día con las últimas técnicas y tendencias del sector.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

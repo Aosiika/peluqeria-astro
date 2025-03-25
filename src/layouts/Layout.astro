@@ -1,0 +1,85 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+---
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Peluquería | Tu sitio de confianza</title>
+	</head>
+	<body>
+		<div class="fixed inset-0 -z-10 bg-neutral-900">
+			<div class="absolute inset-0 bg-fuchsia-400 bg-[size:20px_20px] opacity-20 blur-[100px]"></div>
+		</div>
+		<slot />
+	</body>
+</html>
+
+<style>
+	:root{
+		color-scheme: light dark;
+	}
+	html{
+		font-family: system-ui, sans-serif;
+	}
+	body {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+		position: relative;
+	}
+	
+</style>
+
+<script>
+  // Script para implementar desplazamiento suave en todos los enlaces internos
+  document.addEventListener('DOMContentLoaded', () => {
+    // Seleccionar todos los enlaces que apuntan a anclas internas
+    const internalLinks = document.querySelectorAll('a[href^="#"]');
+    
+    internalLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        // Prevenir el comportamiento predeterminado
+        e.preventDefault();
+        
+        // Obtener el destino del enlace
+        const targetId = link.getAttribute('href');
+        
+        // Si es solo "#", ir al inicio de la página
+        if (targetId === '#') {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+          return;
+        }
+        
+        // Encontrar el elemento de destino
+        const targetElement = document.querySelector(targetId || '');
+        
+        // Si el elemento existe, desplazarse hasta él
+        if (targetElement) {
+          // Calcular la posición con un pequeño offset para evitar que el header fijo oculte el contenido
+          const headerOffset = 80; // Ajustar según la altura del header
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.scrollY - headerOffset;
+          
+          // Desplazarse suavemente a la posición
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+          
+          // Actualizar la URL sin recargar la página
+          if (history && history.pushState) {
+            history.pushState({}, document.title, targetId);
+          }
+        }
+      });
+    });
+  });
+</script>

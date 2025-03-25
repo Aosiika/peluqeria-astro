@@ -1,0 +1,82 @@
+---
+// Importaciones y datos del equipo
+const equipo = [
+  {
+    nombre: "Laura Martínez",
+    puesto: "Directora & Estilista Senior",
+    descripcion: "Con más de 15 años de experiencia, Laura es especialista en coloración y técnicas de corte avanzadas. Su pasión por las últimas tendencias la ha llevado a formarse continuamente en las mejores academias internacionales.",
+    imagen: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+  },
+  {
+    nombre: "Carlos Ruiz",
+    puesto: "Estilista & Colorista",
+    descripcion: "Carlos aporta creatividad y precisión a cada trabajo. Especializado en peinados para eventos y tratamientos capilares, su objetivo es realzar la belleza natural de cada cliente respetando la salud del cabello.",
+    imagen: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+  }
+];
+---
+
+<section id="equipo" class="py-16 md:py-24 relative">
+  
+  <div class="container mx-auto px-4 relative z-10">
+    <!-- Encabezado de sección -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 relative inline-block">
+        Nuestro Equipo
+        <span class="absolute -bottom-2 left-1/4 right-1/4 h-1 bg-fuchsia-500"></span>
+      </h2>
+      <p class="text-base md:text-lg max-w-2xl mx-auto opacity-80">
+        Profesionales apasionados por su trabajo y comprometidos con tu satisfacción
+      </p>
+    </div>
+    
+    <!-- Tarjetas de miembros del equipo -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+      {equipo.map((miembro) => (
+        <div class="group">
+          <div class="relative overflow-hidden rounded-xl shadow-lg transform transition-all duration-500 hover:-translate-y-2">
+            <!-- Imagen con overlay -->
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <img 
+                src={miembro.imagen} 
+                alt={miembro.nombre} 
+                class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-70 transition-opacity duration-300"></div>
+            </div>
+            
+            <!-- Información del miembro -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+              <h3 class="text-2xl font-bold mb-1">{miembro.nombre}</h3>
+              <p class="text-fuchsia-300 font-medium mb-3">{miembro.puesto}</p>
+              
+              <!-- Descripción con mejor visibilidad y funcionamiento en móvil -->
+              <div class="h-0 group-hover:h-auto overflow-hidden transition-all duration-500">
+                <p class="text-sm md:text-base opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  {miembro.descripcion}
+                </p>
+              </div>
+              
+              <!-- Indicador de hover sin parpadeo -->
+              <div class="mt-4 flex items-center gap-2 text-sm">
+                <span class="block w-6 h-0.5 bg-fuchsia-400"></span>
+                <span class="text-white/70 transition-all duration-300 group-hover:translate-y-1 group-hover:opacity-0">Ver más</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <!-- Llamada a la acción -->
+    <div class="text-center mt-16">
+      <a 
+        href="#contacto" 
+        class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 text-white rounded-lg
+               hover:bg-fuchsia-500/20 transition-all duration-300"
+      >
+        Conoce más sobre nosotros
+      </a>
+    </div>
+  </div>
+</section>
